@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CSN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Responsive Pop-Up -->
+    <section>
+        <div id="closepopup" class="bg-gray-900 text-white p-2 font-bold flex justify-center items-center gap-28 ">
+            <h2 class="text-xs md:text-2xl">Sign Up and GET 20% OFF for your first Order </h2>
+            <p id="close" class="cursor-pointer text-xs md:text-2xl">X</p>
+        </div>
+    </section>
+    <!-- Responsive Navbar -->
+    <nav class="bg-white p-3 flex items-center justify-between sticky top-0 z-10 ">
+        <h1 class="text-2xl md:text-4xl font-bold ">Nostra</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class=" gap-20 text-gray-600 font-semibold hidden md:flex">
+            <li>
+                <a class="hover:underline" href="">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">New Arival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+<!-- Responsive Side Navbar -->
+    <section id="sidenavbar" class="bg-gray-900 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh;left:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class=" text-white inline cursor-pointer">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 text-center text-white font-semibold ">
+            <li>
+                <a class="hover:underline" href="">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">New Arival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Responsive Header Section -->
+    <section class="relative overflow-hidden">
+        <ul id="slider" class="flex transition-transform duration-500 ease-in-out">
+            <li class="h-96 min-w-full relative flex items-center justify-center">
+                <img class="h-full w-full object-cover" src="./images/nostra.jpg" alt="Slide 1">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+                    <h1 class="text-2xl font-bold md:text-8xl">Level up your style with our</h1>
+                    <p class="text-xl md:text-3xl md:mt-2">Summer Collections</p>
+                    <button class="bg-white text-black px-4 py-2 rounded mt-4">Shop Now</button>
+                </div>
+            </li>
+            <li class="h-96 min-w-full relative flex items-center justify-center">
+                <img class="h-full w-full object-cover" src="./images/nostra.jpg" alt="Slide 2">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+                    <h1 class="text-2xl font-bold md:text-8xl">Explore New Trends</h1>
+                    <p class="text-xl md:text-3xl md:mt-2">Limited Edition Offers</p>
+                    <button class="bg-white text-black px-4 py-2 rounded mt-4">Shop Now</button>
+                </div>
+            </li>
+            <li class="h-96 min-w-full relative flex items-center justify-center">
+                <img class="h-full w-full object-cover" src="./images/nostra.jpg" alt="Slide 3">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+                    <h1 class="text-2xl font-bold md:text-8xl">Upgrade Your Wardrobe</h1>
+                    <p class="text-xl md:text-3xl md:mt-2">Seasonal Discounts</p>
+                    <button class="bg-white text-black px-4 py-2 rounded mt-4">Shop Now</button>
+                </div>
+            </li>
+        </ul>
+        <div class="absolute inset-0 flex justify-between items-center px-4">
+            <button onclick="prev()" class="text-white ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-20 h-20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button onclick="nxt()" class="text-white ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-20 h-20">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Responsive Brand Section -->
+    <section class=" mt-10 ">
+        <h2 class="font-bold text-xl md:text-4xl ml-5">Brands</h2>
+        <div class="grid grid-cols-3 md:grid-cols-6  gap-5 ml-10 mt-7 mb-10 md:ml-20 md:mt-10 text-3xl font-semibold ">
+            <div>
+                <img class="w-20 " src="./images/behance.png" alt="">
+                <p>Puma</p>
+            </div>
+            <div>
+                <img class="w-20" src="./images/adidas.png" alt="">
+                <p>Addids</p>
+            </div>
+            <div>
+                <img class="w-20" src="./images/simple.png" alt="">
+                <p>Simple</p>
+            </div>
+            <div>
+                <img class="w-20" src="./images/twitch.png" alt="">
+                <p>twitch</p>
+            </div>
+            <div>
+                <img class="w-20" src="./images/leaves.png" alt="">
+                <p>leaves</p>
+            </div>
+            <div>
+                <img class="w-20" src="./images/twitch.png" alt="">
+                <p>twitch</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reveiw Section -->
+    <section class="mt-10 flex justify-between items-center">
+        <div class="flex flex-col m-5">
+            <h1 class="md:text-5xl text-2xl font-semibold ">We Provide Best </h1>
+            <h1 class="md:text-5xl text-2xl font-semibold">Customer Experiences</h1>
+        </div>
+        <div>
+            <p class="text-xl md:text-2xl m-5 ">|| We ensure that our customer have the best shopping experience</p>
+        </div>
+    </section>
+
+    <!-- Review -->
+    <section class="flex m-5 gap-10 ">
+        <div class="md:flex">
+            <div class="bg-gray-200 text-center p-2 m-5">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-20 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                </svg>
+                <h2 class="font-bold">Original Products</h2>
+                <p>Discover exclusive, high-quality products crafted to meet your needs. Shop the latest trends and
+                    timeless essentials, all designed to offer premium value and unmatched.Elevate your
+                    shopping experience today!</p>
+            </div>
+            <div class="bg-gray-200 text-center p-2 m-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-20 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                </svg>
+
+                <h2 class="font-bold">Satisfaction Guarantee</h2>
+                <p>Enjoy a hassle-free shopping experience with our 100% Satisfaction Guarantee. If you're not
+                    completely
+                    happy with your purchase, well make it right with easy returns or exchanges—no questions asked!</p>
+            </div>
+            <div class="bg-gray-200 text-center p-2 m-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-20 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM4 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 10.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                </svg>
+
+                <h2 class="font-bold">New Arrival Everyday</h2>
+                <p>Discover the latest trends with our New Arrivals, updated daily! Shop fresh styles and must-have
+                    products to stay ahead of the curve. Don't miss out—explore what's new today..................!</p>
+            </div>
+            <div class="bg-gray-200 text-center p-2 m-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-20 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+
+                <h2 class="font-bold">Fast & Free Shipping</h2>
+                <p>Enjoy fast & free shipping on every order! Shop with confidence, knowing your products will arrive
+                    quickly without any extra cost. Experience hassle-free delivery right to your doorstep.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- New Arrivel -->
+    <section>
+        <h1 class="font-bold text-2xl md:text-4xl ml-5">New Arivals</h1>
+        <div class="grid grid-cols-2  md:grid md:grid-cols-4 gap-5 m-5">
+            <div class="relative">
+                <div>
+                    <img class="filter brightness-50" src="./images/n1.jpg" alt="">
+                </div>
+                <div class="absolute top-28 left-10 md:top-48 md:left-20 ">
+                    <button class="px-8 py-3 md:px-14 md:py-4 bg-yellow-500 rounded-lg">Shop Now </button>
+                </div>
+
+            </div>
+            <div class="relative">
+                <div>
+                    <img class="filter brightness-50" src="./images/n2.jpg" alt="">
+                </div>
+                <div class="absolute top-28 left-10 md:top-48 md:left-20 ">
+                    <button class="px-8 py-3 md:px-14 md:py-4  bg-yellow-500 rounded-lg">Shop Now </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div>
+                    <img class="filter brightness-50" src="./images/n3.jpg" alt="">
+                </div>
+                <div class="absolute top-28 left-10 md:top-48 md:left-20 ">
+                    <button class="px-8 py-3 md:px-14 md:py-4 bg-yellow-500 rounded-lg">Shop Now </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div>
+                    <img class="filter brightness-50" src="./images/n4.jpg" alt="">
+                </div>
+                <div class="absolute top-28 left-10 md:top-48 md:left-20  ">
+                    <button class="px-8 py-3 md:px-14 md:py-4 bg-yellow-500 rounded-lg">Shop Now </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Most Wanted -->
+    <section>
+        <h1 class="text-xl font-bold md:text-4xl ml-5">Most Wanted</h1>
+        <div class="flex items-center justify-center mt-5 ">
+            <div class="overflow-x-auto whitespace-nowrap">
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m1.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m2.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m3.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m4.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m5.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m6.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m7.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative inline-block w-96">
+                    <div>
+                        <img src="./images/m8.jpg" alt="">
+                    </div>
+                    <div class="absolute top-10 left-8">
+                        <p class="bg-red-600 font-bold text-white text-xl inline px-5 py-2 rounded-lg">Sale</p>
+                    </div>
+                    <div class="absolute bottom-5 right-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-16 h-16 cursor-pointer">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Offer Section -->
+    <section class=" mt-10 hidden md:block ">
+        <div class="relative ">
+            <div class="bg-gray-900 m-5 ">
+                <img class=" px-32 py-5 " src="./images/offer.jpg" alt="">
+            </div>
+            <div class="absolute top-20 right-36">
+                <h1 class="text-5xl font-bold text-white mt-3">Limited Offer</h1>
+                <h3 class="text-3xl font-bold text-white mt-3">35% OFF on this for the first 30 Customers</h3>
+                <button class="bg-white px-10 py-5 rounded-lg mt-3">Shop Now</button>
+            </div>
+
+    </section>
+
+    <!-- Responsive News Letter Section -->
+    <section class="text-center mt-5">
+        <h1 class="text-5xl font-bold mt-5 p-2">Join Our News Letter</h1>
+        <p class="m-3 text-3xl font-semibold">Signup for our email newspaper to get exclusive discounts, updates, and
+            more </p>
+        <input type="text" class="border border-black p-2 m-3 " style="width: 80%;">
+        <br>
+        <button class="bg-gray-900 text-gray-400 font-bold text-3xl p-3 m-1 hover:underline rounded">Subscribe</button>
+    </section>
+
+    <!-- Responsive Footer Section -->
+    <section class="bg-gray-900 mt-5 p-10 flex flex-col gap-5  ">
+        <h1 class="text-5xl font-bold text-white mt-4">Nostra</h1>
+        <p class="text-white mt-4 text-xl md:text-3xl">Discover the ultimate shopping experience with our e-commerce
+            platform!
+            Enjoy a wide range of products, unbeatable deals, and fast & free shipping on every order—delivered right to
+            your door.</p>
+        <div class="text-4xl  cursor-pointer mt-4">
+            <i class="fa-brands fa-pinterest" style="color: white;"></i>
+            <i class="fa-brands fa-facebook" style="color: white;"></i>
+            <i class="fa-brands fa-twitter" style="color: white;"></i>
+            <i class="fa-brands fa-instagram" style="color: white;"></i>
+        </div>
+
+        <p class="cursor-pointer text-white text-3xl mt-4">&copy; 2024 Nostra.com</p>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
