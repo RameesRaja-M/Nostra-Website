@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CSN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Responsive Pop-Up -->
+    <section>
+        <div id="closepopup" class="bg-gray-900 text-white p-2 font-bold flex justify-center items-center gap-28 ">
+            <h2 class="text-xs md:text-2xl">Sign Up and GET 20% OFF for your first Order </h2>
+            <p id="close" class="cursor-pointer text-xs md:text-2xl">X</p>
+        </div>
+    </section>
+    <!-- Responsive Navbar -->
+    <nav class="bg-white p-3 flex items-center justify-between sticky top-0 z-10 ">
+        <h1 class="text-2xl md:text-4xl font-bold ">Nostra</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class=" gap-20 text-gray-600 font-semibold hidden md:flex">
+            <li>
+                <a class="hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">New Arival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="collections.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Responsive Side Navbar -->
+    <section id="sidenavbar" class="bg-gray-900 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh;left:-50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class=" text-white inline cursor-pointer">X</p>
+        </div>
+
+        <ul class="flex flex-col gap-10 text-center text-white font-semibold ">
+            <li>
+                <a class="hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">New Arival</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="collections.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+    <!-- Responsive Collections -->
+    <section class="md:grid md:grid-cols-5 md:grid-flow-col grid grid-cols-3 grid-flow-col">
+        <div>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold mt-10 md:mt-20 ">Occuation</h1>
+                <div class="text-2xl md:text-3xl pl-5 ">
+                    <p><input type="checkbox">Summer</p>
+                    <p><input type="checkbox">Party</p>
+                    <p><input type="checkbox">Beach</p>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold mt-10 md:mt-16">Colours</h1>
+                <div class="text-2xl md:text-3xl pl-5 gap-5">
+                    <p><input type="checkbox">Red</p>
+                    <p><input type="checkbox">Blue</p>
+                    <p><input type="checkbox">Green</p>
+                    <p><input type="checkbox">white</p>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold mt-10 md:mt-16">Arivals</h1>
+                <div class="text-2xl md:text-3xl pl-5 gap-5">
+                    <p><input type="checkbox">New</p>
+                    <p><input type="checkbox">Old</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-2 md:col-span-4">
+            <div>
+                <div>
+                    <div class="relative">
+                        <div>
+                            <input id="search" type="text" placeholder="Search"
+                                class="border border-black p-2 m-3 rounded-lg " style="width: 95%;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="collection-container" class="grid grid-cols-2 m-1 gap-3 md:grid md:grid-cols-3 md:m-5 md:gap-14">
+                <div>
+                    <img src="./images/c1.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Floral Summer Shirt</h2>
+                    <p class="font-bold md:text-xl">₹220</p>
+                </div>
+                <div>
+                    <img src="./images/c2.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Summer Green</h2>
+                    <p class="font-bold md:text-xl">₹250</p>
+                </div>
+                <div>
+                    <img src="./images/c3.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Party Floral Shirt</h2>
+                    <p class="font-bold md:text-xl">₹280</p>
+                </div>
+                <div>
+                    <img src="./images/c4.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Floral Summer Shirt</h2>
+                    <p class="font-bold md:text-xl">₹300</p>
+                </div>
+                <div>
+                    <img src="./images/c5.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Beach Shirt</h2>
+                    <p class="font-bold md:text-xl">₹320</p>
+                </div>
+                <div>
+                    <img src="./images/c6.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Shirt Party Red</h2>
+                    <p class="font-bold md:text-xl">₹340</p>
+                </div>
+                <div>
+                    <img src="./images/c7.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Party Floral Shirt</h2>
+                    <p class="font-bold md:text-xl">₹380</p>
+                </div>
+                <div>
+                    <img src="./images/c8.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Shirt Party Red</h2>
+                    <p class="font-bold md:text-xl">₹400</p>
+                </div>
+                <div>
+                    <img src="./images/c9.jpg" alt="">
+                    <h2 class="font-bold md:text-3xl">Floral Summer Shirt</h2>
+                    <p class="font-bold md:text-xl">₹500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive News Letter Section -->
+    <section class="text-center mt-5">
+        <h1 class="text-5xl font-bold mt-5 p-2">Join Our News Letter</h1>
+        <p class="m-3 text-3xl font-semibold">Signup for our email newspaper to get exclusive discounts, updates, and
+            more </p>
+        <input type="text" class="border border-black p-2 m-3 " style="width: 80%;">
+        <br>
+        <button class="bg-gray-900 text-gray-400 font-bold text-3xl p-3 m-1 hover:underline rounded">Subscribe</button>
+    </section>
+
+    <!-- Responsive Footer Section -->
+    <section class="bg-gray-900 mt-5 p-10 flex flex-col gap-5  ">
+        <h1 class="text-5xl font-bold text-white mt-4">Nostra</h1>
+        <p class="text-white mt-4 text-xl md:text-3xl">Discover the ultimate shopping experience with our e-commerce
+            platform!
+            Enjoy a wide range of products, unbeatable deals, and fast & free shipping on every order—delivered right to
+            your door.</p>
+        <div class="text-4xl  cursor-pointer mt-4">
+            <i class="fa-brands fa-pinterest" style="color: white;"></i>
+            <i class="fa-brands fa-facebook" style="color: white;"></i>
+            <i class="fa-brands fa-twitter" style="color: white;"></i>
+            <i class="fa-brands fa-instagram" style="color: white;"></i>
+        </div>
+
+        <p class="cursor-pointer text-white text-3xl mt-4">&copy; 2024 Nostra.com</p>
+
+    </section>
+
+    <!-- Link Javascript File -->
+    <script src="collections.js"></script>
+</body>
+
+</html>
