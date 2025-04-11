@@ -26,7 +26,7 @@ Website : https://rameesraja-m.github.io/Nostra-Website/
 | Styling     | HTML, CSS, Tailwind CSS        |
 | Functionality | JavaScript                   |
 | Tools       | Git, GitHub                    |
-| Deployment  | (Add your hosting platform here if deployed) |
+| Deployment  | GitHub |
 
 ## Learning Outcomes
 
